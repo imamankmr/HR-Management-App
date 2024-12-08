@@ -31,9 +31,6 @@ app.use("/api/employees", employeeRoutes);
 
 
 // Database Connection
-
-
-
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

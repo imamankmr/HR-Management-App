@@ -42,7 +42,7 @@ const addCandidate = async (req, res) => {
 };
 
 
-// Update candidate (e.g., mark as employee)
+// Update candidate 
 const updateCandidate = async (req, res) => {
   const { candidateId } = req.params;
   try {
@@ -52,7 +52,7 @@ const updateCandidate = async (req, res) => {
       return res.status(404).json({ msg: "Candidate not found" });
     }
 
-    candidate.isEmployee = true; // Update the status to employee
+    candidate.isEmployee = true; 
     await candidate.save();
     res.json(candidate);
   } catch (error) {
