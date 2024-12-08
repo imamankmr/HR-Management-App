@@ -1,0 +1,31 @@
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 60px; 
+}
+
+
+.dashboard-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.dashboard-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #555;
+}

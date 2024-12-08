@@ -1,0 +1,190 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.table-head{
+  background-color: rgb(150, 192, 211);
+  color: black;
+}
+
+
+
+.candidate-page {
+ width: 75vw;
+  height: 100vh;
+  margin: 0 auto;
+  margin-left: 20vh;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.search-container {
+  margin: 20px 0;
+  text-align: center;
+  
+}
+
+.search-bar {
+  
+  padding: 10px;
+  width: 60%;
+  background-color: white;
+  border: 1px solid #783FED;
+  
+}
+
+.add-button {
+  background: linear-gradient(180deg, #783FED 0%, #442487 100%);
+  width: Hug (212px)px;
+  height: Hug (38px)px;
+  top: 114px;
+  left: 1188px;
+  padding: 8px 32px 8px 32px;
+  gap: 8px;
+  border-radius: 50px 0px 0px 0px;
+  opacity: 0px;
+
+
+  
+  
+
+  /* color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.add-button:hover {
+  background-color: #214c88;
+}
+
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.candidate-table th,
+.candidate-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.candidate-table th {
+  background-color: #f8f9fa;
+}
+
+.view-resume {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.view-resume:hover {
+  text-decoration: underline;
+}
+
+.move-button,
+.delete-button {
+  padding: 6px 12px;
+  margin: 4px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.move-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.move-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #3594dc;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #082eed;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.modal-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 1px solid #783FED;
+  
+  border-radius: 5px;
+}
+
+.modal-form button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #45a5e6;
+}
+
+.cancel-button:hover {
+  background-color: #1f82ec;
+}
+
+.submit-button {
+  background-color: #2855a7;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #213788;
+}

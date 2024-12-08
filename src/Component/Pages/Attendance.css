@@ -1,0 +1,103 @@
+
+.attendance-page {
+  margin-left: 250px; 
+  padding: 20px;
+  width: 70vw;
+  background-color: #f4f4f4; 
+  height: 100vh; 
+  overflow-y: auto; 
+}
+
+
+.attendance-page h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.attendance-list {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.attendance-list th,
+.attendance-list td {
+  padding: 12px;
+  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.attendance-list th {
+  background: linear-gradient(180deg, #783FED 0%, #442487 100%);
+  width: 1080px;
+  height: 54px;
+  top: 176px;
+  left: 320px;
+  gap: 0px;
+  border-radius: 20px 20px 0px 0px;
+  opacity: 0px;
+
+  color: white;
+}
+
+.attendance-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.attendance-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.attendance-list select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+
+.attendance-list input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+
+.submit-btn {
+  margin-top: 20px;
+  text-align: center;
+}
+tbody{
+color: black;
+}
+
+input{
+background-color: white;
+
+}
+select{
+  color: black;
+}
+
+.submit-btn button {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn button:hover {
+  background: linear-gradient(180deg, #783FED 0%, #442487 100%);
+  color: white;
+  border:none;
+}

@@ -1,0 +1,140 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  width: 250px; 
+  height: 100vh; 
+  background-color: #153260;
+  color: white;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navbar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #e9eaeb;
+}
+
+
+.nav-category {
+  margin-bottom: 20px;
+}
+
+.nav-category h3 {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #e1e1e1;
+}
+
+.nav-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-category li {
+  margin: 10px 0;
+}
+
+.nav-category a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  padding: 10px;
+  padding-left: 30px; 
+  transition: background-color 0.3s ease;
+}
+
+
+.nav-category a:hover {
+  background-color: #444;
+  color: #ffcc00;
+}
+
+.logout {
+  margin-top: auto; 
+  padding: 10px;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 30px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.logout a:hover {
+  background-color: #444;
+  color: #3796c2;
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: #369bf4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #2159cb;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+}
