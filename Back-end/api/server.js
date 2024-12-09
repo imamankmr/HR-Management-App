@@ -22,7 +22,9 @@ const PORT = process.env.PORT ;
 
 
 // Middleware
-app.use(cors());
+
+app.use(cors({ origin: "https://hr-management-app-q6s5.vercel.app" }));
+
 app.use(bodyParser.json());
 app.use(express.json());
 
