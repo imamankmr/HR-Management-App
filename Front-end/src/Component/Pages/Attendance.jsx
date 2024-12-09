@@ -4,9 +4,7 @@ import Navbar from "./Navbar";
 
 const Attendance = () => {
   const [employees, setEmployees] = useState([
-    // Sample employee data
-    { id: 1, name: "John Doe", department: "HR", position: "Manager", status: "Present", task: "" },
-    { id: 2, name: "Jane Smith", department: "Engineering", position: "Developer", status: "Absent", task: "" },
+   
   ]);
 
   // Handle attendance status change

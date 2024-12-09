@@ -3,11 +3,13 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons from react-icons
-import "./Registration.css"; // Import your CSS file for styling
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import "./Registration.css";
+import config from "../../../config";
 
 const Registration = () => {
-  // Validation Schema
+ 
+
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(3, "Name must be at least 3 characters long")
@@ -23,7 +25,7 @@ const Registration = () => {
       .required("Confirm Password is required"),
   });
 
-  // Initial Values for Formik
+
   const initialValues = {
     name: "",
     email: "",
@@ -31,24 +33,24 @@ const Registration = () => {
     confirmPassword: "",
   };
 
-  // State for password visibility
+ 
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
-  // Handle Submit for Form
+
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-    console.log("Form data:", values); // Log form data
+    console.log("Form data:", values); 
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", values);
-      console.log("Response from server:", response.data); // Log server response
-      alert(response.data.message || "User registered successfully!"); // Show success message
-      resetForm(); // Reset form after successful submission
+      const response = await axios.post( `${config.API_BASE_URL}/api/auth/register`, values);
+      console.log("Response from server:", response.data); 
+      alert(response.data.message || "User registered successfully!"); 
+      resetForm(); 
     } catch (error) {
       console.error("Error registering user:", error);
       alert("Failed to register user");
     } finally {
-      setSubmitting(false); // Disable the submit button after request completion
+      setSubmitting(false); 
     }
   };
 
@@ -62,7 +64,7 @@ const Registration = () => {
       >
         {({ isSubmitting }) => (
           <Form className="registration-form">
-            {/* Name Field */}
+           
             <div className="form-group">
               <label htmlFor="name" className="form-label">
                 Name
@@ -77,7 +79,7 @@ const Registration = () => {
               <ErrorMessage name="name" component="div" className="form-error" />
             </div>
 
-            {/* Email Field */}
+       
             <div className="form-group">
               <label htmlFor="email" className="form-label">
                 Email
@@ -92,7 +94,7 @@ const Registration = () => {
               <ErrorMessage name="email" component="div" className="form-error" />
             </div>
 
-            {/* Password Field */}
+           
             <div className="form-group">
               <label htmlFor="password" className="form-label">
                 Password
@@ -115,7 +117,7 @@ const Registration = () => {
               <ErrorMessage name="password" component="div" className="form-error" />
             </div>
 
-            {/* Confirm Password Field */}
+          
             <div className="form-group">
               <label htmlFor="confirmPassword" className="form-label">
                 Confirm Password
@@ -138,7 +140,7 @@ const Registration = () => {
               <ErrorMessage name="confirmPassword" component="div" className="form-error" />
             </div>
 
-            {/* Submit Button */}
+          
             <div className="form-actions">
               <button type="submit" className="register-button" disabled={isSubmitting}>
                 {isSubmitting ? "Registering..." : "Register"}

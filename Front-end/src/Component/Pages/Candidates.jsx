@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Candidates.css";
 import Navbar from "./Navbar";
 import axios from "axios";
+import config from "../../../config";
 
 const Candidates = () => {
   const [candidates, setCandidates] = useState([]);
@@ -22,7 +23,7 @@ const Candidates = () => {
 
   const fetchCandidates = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/candidates");
+      const { data } = await axios.get(`${config.API_BASE_URL}/api/auth/candidates`);
       setCandidates(data);
     } catch (error) {
       console.error("Error fetching candidates:", error);
@@ -46,7 +47,7 @@ const Candidates = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/api/candidates", newCandidate);
+      await axios.post(`${config.API_BASE_URL}/api/auth/candidates`, newCandidate);
       fetchCandidates();
       setShowModal(false);
       setNewCandidate({
@@ -63,7 +64,7 @@ const Candidates = () => {
 
   const handleUpdate = async (candidateId) => {
     try {
-      await axios.patch(`http://localhost:5000/api/candidates/${candidateId}`, {
+      await axios.patch(`${config.API_BASE_URL}/api/auth/candidates${candidateId}`, {
         isEmployee: true,
       });
       fetchCandidates();
@@ -75,7 +76,7 @@ const Candidates = () => {
   const handleDelete = async (candidateId) => {
     console.log("Delete  candidateID:", candidateId);
     try {
-      await axios.delete(`http://localhost:5000/api/candidates/${candidateId}`);
+      await axios.delete(`${config.API_BASE_URL}/api/auth/candidates${candidateId}`);
       fetchCandidates();
     } catch (error) {
       console.error("Error deleting candidate:", error);

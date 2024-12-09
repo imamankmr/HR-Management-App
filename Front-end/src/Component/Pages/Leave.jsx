@@ -7,24 +7,7 @@ import Navbar from "./Navbar";
 
 const Leave = () => {
   const [leaveRequests, setLeaveRequests] = useState([
-    {
-      id: 1,
-      employeeName: "John Doe",
-      leaveType: "Sick Leave",
-      startDate: "2024-12-10",
-      endDate: "2024-12-12",
-      status: "Approved",
-      document: "leave_doc_1.pdf"
-    },
-    {
-      id: 2,
-      employeeName: "Jane Smith",
-      leaveType: "Vacation",
-      startDate: "2024-12-15",
-      endDate: "2024-12-18",
-      status: "Pending",
-      document: "leave_doc_2.pdf"
-    }
+   
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);

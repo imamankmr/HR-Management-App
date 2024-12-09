@@ -5,6 +5,7 @@ import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import config from "../../../config";
 
 const Login = ({ setToken }) => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Login = ({ setToken }) => {
   // Handle form submission
   const handleLogin = async (values, { setSubmitting, setFieldError }) => {
     try {
-      const { data } = await axios.post("http://localhost:5000/api/auth/login", values);
+      const { data } = await axios.post(`${config.API_BASE_URL}/api/auth/login`, values);
       setToken(data.token); 
       navigate("/dashboard"); 
     } catch (error) {

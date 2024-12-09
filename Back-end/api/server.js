@@ -50,7 +50,7 @@ app.listen(PORT, () => {
 });
 
 
-app.get('/api/app', (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).send('Backend is running!');
 });
 

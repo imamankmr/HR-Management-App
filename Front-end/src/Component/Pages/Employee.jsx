@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Employee.css"; // Importing the CSS file
 import Navbar from "./Navbar";
+import config from "../../../config";
 
 const Employee = () => {
   const [employees, setEmployees] = useState([]);
@@ -41,7 +42,7 @@ const Employee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/employees", newEmployee);
+      const response = await axios.post(`${config.API_BASE_URL}/api/auth/employees`, newEmployee);
 
       setEmployees([...employees, response.data]);
       setShowModal(false);
@@ -65,7 +66,7 @@ const Employee = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/employees/${employeeToUpdate.id}`,
+       `${config.API_BASE_URL}/api/auth/employees${employeeToUpdate.id}`,
         employeeToUpdate
       );
       const updatedEmployees = employees.map((employee) =>
@@ -82,7 +83,7 @@ const Employee = () => {
   // Handle delete employee
   const handleDelete = async (employeeId) => {
     try {
-      await axios.delete(`http://localhost:5000/employees/${employeeId}`);
+      await axios.delete(`${config.API_BASE_URL}/api/auth/employees${employeeId}`);
       setEmployees(employees.filter((employee) => employee.id !== employeeId));
     } catch (err) {
       console.error("Error deleting employee", err);
