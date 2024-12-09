@@ -23,7 +23,12 @@ const PORT = process.env.PORT ;
 
 // Middleware
 
-app.use(cors({ origin: "https://hr-management-app-q6s5.vercel.app" }));
+const corsOptions = {
+  origin: 'https://hr-management-app-q6s5.vercel.app', // Frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+};
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(express.json());
