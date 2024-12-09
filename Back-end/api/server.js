@@ -24,9 +24,9 @@ const PORT = process.env.PORT ;
 // Middleware
 
 const corsOptions = {
-  origin: 'https://hr-management-app-q6s5.vercel.app', // Frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  origin: 'https://hr-management-app-q6s5.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'], 
 };
 app.use(cors(corsOptions));
 
