@@ -8,10 +8,10 @@ body {
 
 .leave-page {
   padding: 20px;
-  height: 100vh;
-  max-width: 1200px;
   width: 70vw;
+  height: 100vh;
   margin: 0 auto;
+  margin-left: 25vh;
 }
 
 .page-title {

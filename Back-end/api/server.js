@@ -2,12 +2,12 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const authRoutes = require("./routes/authRoutes");
-const verifyToken = require('./middleware/authMiddleware');
-const bodyParser = require('body-parser');
-const candidatesRoutes = require("./routes/candidatesRoutes");
+const bodyParser = require("body-parser");
+const authRoutes = require("../routes/authRoutes");
+
+const candidatesRoutes = require("../routes/candidatesRoutes");
 const path = require("path");
-const employeeRoutes = require("./routes/employeeRoutes");
+const employeeRoutes = require("../routes/employeeRoutes");
 
 
 // Load environment variables
@@ -18,6 +18,9 @@ const PORT = process.env.PORT ;
 
 
 
+
+
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
@@ -25,6 +28,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
+
 app.use("/api/candidates", candidatesRoutes);
 app.use("/api/employees", employeeRoutes); 
 
@@ -44,3 +48,13 @@ mongoose
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+app.get('/api/app', (req, res) => {
+  res.status(200).send('Backend is running!');
+});
+
+
+module.exports = (req, res) => {
+  app(req, res); 
+};
